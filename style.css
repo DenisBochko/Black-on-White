@@ -1,0 +1,1112 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@200&family=Unbounded&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Sofia+Sans+Semi+Condensed:wght@200&family=Space+Mono:wght@700&family=Unbounded&display=swap');
+@media screen and (max-width: 1920px){
+/**{
+    padding: 0;
+    margin: 0;
+}*/
+html{
+    /*width: 100%;
+    max-width: 100%; //тоже самое в body прописать*/
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: black;
+    
+}
+.page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    /*border: 2px solid aqua; /*режим отладки*/
+    margin: 10px 0px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+}
+.logo{
+    /*border: 2px solid green; /*режим отладки*/
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+}
+/*логотип-ссылка*/
+.link_logo{
+    color: black;
+    text-decoration: none;
+}
+.link_logo:visited {
+    color: black;/* Цвет посещенных ссылок */
+    text-decoration: none; 
+}
+.link_logo:active {
+    color: black; /* Цвет активных ссылок */
+    text-decoration: none;
+}
+
+
+.box1{
+    /*border: 2px solid red; /*режим отладки*/
+    background-color: white;
+    height: 80px;
+    width: 296.45px;
+    overflow: hidden;
+    border-radius: 5px;  /*стрём-решение(изменено:'норм решение')*/
+}
+.text-1{
+    
+    font-weight: bold;
+    font-size: 49px;
+    background-color: white;
+    padding: 10px;
+    /*line-height: 80px;*/
+}
+
+.box2{
+    /*border: 2px solid red; /*режим отладки*/
+    background-color: black;
+    height: 80px;
+    width: 209.09px;
+    overflow: hidden;
+}
+.text-2{
+    
+    font-weight: bold;
+    font-size: 49px;
+    color: white;
+    padding: 10px;
+    
+}
+.border_logo{
+    border:2px solid white;
+    margin-top: 20px;
+    height: 0px;
+    width: 300px;
+    animation: scaler 1s 2s forwards ease-in-out;
+    opacity: 0;
+}
+nav{
+    font-size: 22px;
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+nav a:hover {
+    background-size: 100% 2px;
+}
+main{
+    opacity: 0;
+}
+.info_1{
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    margin-top: 50px;
+}
+#info_2{
+    font-size: 20px;
+    background-color: white;
+    opacity: 0;
+    margin-top: 50px;
+    padding: 50px;
+} 
+/*анимация информации о команде*/
+/*.container_svg{ 
+    background-color: aqua; /* режим отладки
+    display: flex;
+    justify-content: center;
+}
+#demo-svg{
+    margin-top: 20px;
+    transform: scale(1.2);
+    opacity: 0;
+    
+}
+#demo-svg path{
+    stroke-dasharray: 900;
+    stroke-dashoffset: 0; 
+}*/
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+.title {
+    width: 12ch;
+    margin: 40px;
+    overflow: hidden;
+    color: white;
+    font-size: 6em;
+    font-weight: 700;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid white;
+    animation: printed-text 3s steps(12),
+        flashin-border .75s step-start infinite;
+        animation-delay: 2s;
+}
+
+/*слайдер*/
+.team_slider{
+    margin: 20px 15%;
+    border-radius: 20px;
+    /*max-width: 500px;*/
+}
+.slide{
+    background: linear-gradient(white,white);
+    border-radius: 20px;
+    margin:10px;
+}
+.photo{
+    height: 576px;
+    width: 431px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+}
+.other_info_sleder{
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+.other_info_sleder>.text{
+    font-size: 20px;
+}
+/*информация о проекте*/
+#our_project{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    margin:0 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container_3d-animation{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20%;
+
+}
+.container_3d-animation .box_3d-animation{
+    transform-style: preserve-3d;
+    animation: animate_3dtext 25s linear infinite;
+}
+.container_3d-animation .box_3d-animation span{
+    position: absolute;
+    color: #222;
+    font-size: 3.5em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 10px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    line-height: 0.76em;
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgba(0.0.0.0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(108px);
+}
+.container_3d-animation .box_3d-animation span i:nth-child(1){
+    font-style: initial;
+    color: #ff246f
+}
+.container_3d-animation .box_3d-animation span i:nth-child(2){
+    font-style: initial;
+    color: #12b5ff
+}
+
+.about_our_project{
+    padding:0 100px;
+    background-color: white;
+    max-width: 50%;
+}
+#about_our_project_h2{
+    color: white;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+}
+.about_our_project h3{
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; /*классный шрифт*/
+    font-size: 27px;
+    line-height: 1.8em;
+    padding-top: 10px;
+    border-top: 5px solid black;
+    border-bottom: 5px solid black;
+}
+/*Процесс создания видео*/
+#h1_create_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 50px;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+.h1_create_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 50px;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.container_create_project{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background: rgb(0, 0, 0);
+}
+.box_create_project{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    padding-top: 10px;
+    animation: create_project 30s linear infinite;
+}
+.box_create_project span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
+    /*-webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #000); для создания тени под фото*/
+}
+.box_create_project span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+    border-radius: 20px;
+}
+.box_create_project span:hover img{
+    transform: translateY(-20px) scale(1.1);
+}
+.parallax_bg{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+/*Процесс создания видео(водные карточки)*/
+.water_cards-container{
+    min-height: 60vh;
+    background: #ffffff;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    gap: 40px 40px;
+    border-radius: 20px;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif; /*классный шрифт*/
+    font-size: 22px;
+}
+.water_cards-container .drop{
+    position: relative;
+    width: 450px;
+    height: 450px;
+
+    box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05), 
+    25px 35px 20px rgba(0,0,0,0.05), 
+    25px 30px 30px rgba(0,0,0,0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.712);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.water_cards-container .drop:nth-child(1){
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%; /*66% 34% 62% 38% / 30% 68% 32% 70%*/
+}
+.water_cards-container .drop:nth-child(2){
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%; /*58% 42% 56% 44% / 38% 29% 71% 62%*/
+}
+.water_cards-container .drop:nth-child(3){
+    border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%; /*24% 76% 32% 68% / 53% 35% 65% 47%*/
+}
+.water_cards-container .drop:hover{
+    border-radius: 50%;
+}
+.water_cards-container .drop::before{
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 85px;
+
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.water_cards-container .drop::after{
+    content: '';
+    position: absolute;
+    top: 90px;
+    left: 110px;
+
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+.water_cards-container .drop .content-drop{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    gap: 10px;
+}
+.water_cards-container .drop .content-drop h2{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #eff0f4;
+    border-radius: 50%;
+    box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+    inset -2px -5px 10px rgba(255,255,255,1),
+    15px 15px 10px rgba(0,0,0,0.05),
+    15px 10px 15px rgba(0,0,0,0.025);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--clr);
+}
+.emoji{
+    font-size: 30px;
+}
+/*блок видео*/
+#container_video{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;/*вертикаль*/
+    flex-wrap: wrap;
+}
+#container_video h1{
+    color: white;
+    font-size: 3.5em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+    margin: 50px;
+}
+.video{
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    background-size: 100%;
+    border-radius: 20px;
+    margin-bottom: 100px;
+    transition: 0.2s ease-in-out;
+}
+.video:hover{
+    cursor: pointer;
+}
+.video iframe{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+/*footer*/
+.footer{
+    padding: 60px 0 50px;
+    background-color: #000;
+    color: #ffffff;
+    opacity: 0;
+}
+.footer_wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*по оси Y*/
+    row-gap: 27px;
+}
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 70px;
+    padding-left: 0;
+}
+.social_item{
+    list-style-type: none; /* Убираем маркеры */
+}
+.copyright{
+    font-size: 16px;
+}
+.img_footer{
+    transform: scale(1.5);
+}
+/*стилизованный скроллбар*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: black;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+/*кейфреймы анимаций*/
+@keyframes scaler {
+    0%{
+        transform: scaleX(1);
+        opacity: 0;
+    }
+    1%{
+        opacity: 1;
+    }
+    100%{
+        transform: scaleX(6);
+        opacity: 1;
+    }
+}
+@keyframes flashin-border {
+    0% {
+        border-color: white;
+    }
+
+    50% {
+        border-color: transparent;
+    }
+
+    100% {
+        border-color: white;
+    }
+}
+
+@keyframes printed-text {
+    from {
+        width: 0ch;
+    }
+    to{
+        width: 12ch;
+    }
+}
+@keyframes animate_3dtext {
+   0%{
+    transform: perspective(1000px) rotateX(0deg) rotate(15deg);
+   } 
+   100%{
+    transform: perspective(1000px) rotateX(360deg) rotate(15deg);
+   } 
+}
+@keyframes create_project {
+    0%{
+        transform: perspective(1000px) rotateY(0deg) ;
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg) ;
+    }
+}
+}
+
+@media screen and (max-width: 600px){
+    html{
+        /*width: 100%;
+        max-width: 100%; //тоже самое в body прописать
+        overflow-x: hidden;*/
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        background-color: black;
+    }
+    
+    header{
+        /*border: 2px solid aqua; /*режим отладки*/
+        margin: 1px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+    }
+    .logo{
+        /*border: 2px solid green; /*режим отладки*/
+        padding: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*логотип-ссылка*/
+    .link_logo{
+        color: black;
+        text-decoration: none;
+    }
+    .link_logo:visited {
+        color: black;/* Цвет посещенных ссылок */
+        text-decoration: none; 
+    }
+    .link_logo:active {
+        color: black; /* Цвет активных ссылок */
+        text-decoration: none;
+    }
+
+    .box1{
+        /*border: 2px solid red; /*режим отладки*/
+        background-color: white;
+        height: 40px;
+        /*max-width: 153.45px;*/
+        max-width: 153.45px;
+        overflow: hidden;
+        border-radius: 5px;  /*стрём-решение*/
+        display: flex;
+        text-align: center;
+        margin-left: -65px; /*для анимации*/
+        animation: logo_animation_margin 0.3s 1s forwards ease-in-out;
+    }
+    .text-1{   
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 20px;
+        background-color: white;
+        padding: 10px;
+        /*line-height: 80px;*/
+    }
+    .box2{
+        /*border: 2px solid red; /*режим отладки*/
+        background-color: black;
+        height: 40px;
+        max-width: 110px;
+        overflow: hidden;
+    }
+    .text-2{
+        
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 20px;
+        color: white;
+        padding: 10px;
+        
+    }
+    
+    .border_logo{
+        border:1px solid white;
+        margin-top: 10px;
+        height: 0px;
+        width: 200px;
+        animation: scaler 1s 2s forwards ease-in-out;
+        opacity: 0;
+    }
+    nav{
+        font-size: 15px;
+        opacity: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    nav a{
+        color: white;
+    }
+    main{
+        opacity: 0;
+    }
+    .info_1{
+        font-size: 15px;
+        color: white;
+        opacity: 0;
+        margin-top: 50px;
+    }
+    #info_2{
+        font-size: 25px;
+        background-color: white;
+        opacity: 0;
+        margin-top: 20px;
+        padding: 10px;
+    }
+    /*анимация информации о команде*/
+    /*.container_svg{ 
+        /*background-color: aqua; /* режим отладки
+        display: flex;
+        justify-content: center;
+    }
+    #demo-svg{
+        transform: scale(1);
+        margin-right: 0%;
+        opacity: 0;
+    }
+    #demo-svg path{
+        transform: translate(100,20);
+        stroke-dasharray: 900;
+        stroke-dashoffset: 100;
+    }*/
+    #wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+    }
+    .title {
+        width: 12ch;
+        margin: 20px;
+        overflow: hidden;
+        color: white;
+        font-size: 3em;
+        font-weight: 700;
+        font-family: monospace;
+        white-space: nowrap;
+        border-right: 4px solid white;
+        animation: printed-text 3s steps(12),
+            flashin-border .75s step-start infinite;
+            animation-delay: 2s;
+    }
+    
+    /*слайдер*/
+    .team_slider{
+        margin: 10px 5%;
+    }
+    .slide{
+        background: linear-gradient(white, white);
+        border-radius: 20px;
+        padding: 20px 20px;
+        
+    }
+    .photo{
+        height: 300px;
+        width: 269px;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-radius: 5%;
+    }
+    .other_info_sleder{
+        margin-left: 5%;
+    }
+    .other_info_sleder>.text{
+        font-size: 20px;
+    }
+    /*информация о проекте*/
+    #our_project{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-top: 5px solid black;
+        margin:0 5px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        overflow: hidden;
+    }
+    .container_3d-animation{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .container_3d-animation .box_3d-animation{
+        transform-style: preserve-3d;
+        animation: animate_3dtext 25s linear infinite;
+    }
+    .container_3d-animation .box_3d-animation span{
+        position: absolute;
+        color: #222;
+        font-size: 2.3em;
+        white-space: nowrap;
+        text-transform: uppercase;
+        font-weight: 900;
+        padding: 0 10px;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+        line-height: 0.76em;
+        transform-style: preserve-3d;
+        text-shadow: 0 5px 15px rgba(0.0.0.0.25);
+        transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(70.3px);
+    }
+    .container_3d-animation .box_3d-animation span i:nth-child(1){
+        font-style: initial;
+        color: #ff246f
+    }
+    .container_3d-animation .box_3d-animation span i:nth-child(2){
+        font-style: initial;
+        color: #12b5ff
+    }
+    
+    .about_our_project{
+        padding:0 10px;
+        background-color: white;
+        min-width: 290px;
+    }
+    #about_our_project_h2{
+        color: white;
+        font-size: 1.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+
+        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+    .about_our_project h3{
+        font-family: 'Sofia Sans Semi Condensed', sans-serif; /*классный шрифт*/
+        font-size: 14px;
+        min-width: 250px;
+        line-height: 1.8em;
+        padding-top: 10px;
+        border-top: 5px solid white;
+        border-bottom: 5px solid white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Процесс создания видео*/
+    #h1_create_project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        
+        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+        
+        font-size: 1.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+    }
+    .h1_create_project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+        
+        margin-bottom: 30px;
+        margin-top: 50px;
+        margin-left: 0;
+        margin-right: 0;
+        
+        font-size: 1.8em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+    }
+    .container_create_project{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        background: #000;
+        
+    }
+    .box_create_project{
+        position: relative;
+        width: 170px;
+        height: 170px;
+        transform-style: preserve-3d;
+        padding-top: 10px;
+        
+        animation: create_project 30s linear infinite;
+    }
+    .box_create_project span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transform-origin: center;
+        transform-style: preserve-3d;
+        transform: rotateX(calc(var(--i) * 45deg)) translateZ(240px);
+        /*-webkit-box-reflect: below 0px linear-gradient(transparent,transparent, #000); для создания тени под фото*/
+    }
+    .box_create_project span img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: 1s;
+        border-radius: 20px;
+    }
+    .box_create_project span:hover img{
+        transform: scale(1.2);
+    }
+    .parallax_bg{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+    }
+    /*Процесс создания видео(водные карточки)*/
+    .water_cards-container{
+        min-height: 70vh;
+        background: #ffffff;
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 50px 0px;
+        margin-top: 60px;
+        gap: 20px 20px;
+        border-radius: 20px;
+        font-family: 'Sofia Sans Semi Condensed', sans-serif; /*классный шрифт*/
+        font-size: 19px;
+    }
+    .water_cards-container .drop{
+        position: relative;
+        width: 350px;
+        height: 350px;
+
+        box-shadow: inset 20px 20px 20px rgba(0,0,0,0.05), 
+        25px 35px 20px rgba(0,0,0,0.05), 
+        25px 30px 30px rgba(0,0,0,0.05),
+        inset -20px -20px 25px rgba(255,255,255,0.9);
+        transition: 0.5s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .water_cards-container .drop:nth-child(1){
+        border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+    }
+    .water_cards-container .drop:nth-child(2){
+        border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+    }
+    .water_cards-container .drop:nth-child(3){
+        border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
+    }
+    .water_cards-container .drop:hover{
+        border-radius: 50%;
+    }
+    
+    .water_cards-container .drop .content-drop{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+        gap: 0px;
+    }
+    .water_cards-container .drop .content-drop h2{
+        position: relative;
+        width: 70px;
+        height: 70px;
+        background: #ffffff;
+        border-radius: 50%;
+        box-shadow: inset 2px 5px 10px rgba(0,0,0,0.1),
+        inset -2px -5px 10px rgba(255,255,255,1),
+        15px 15px 10px rgba(0,0,0,0.05),
+        15px 10px 15px rgba(0,0,0,0.025);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        font-weight: 700;
+        color: var(--clr);
+    }
+    .emoji{
+        font-size: 20px;
+    }
+    /*блок видео*/
+    #container_video{
+        width: 100%;
+        height: 100vh;
+        max-width: 330px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;/*вертикаль*/
+        flex-wrap: wrap;
+    }
+    #container_video h1{
+        color: white;
+        font-size: 3em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 800;
+        margin: 20px;
+    }
+    .video{
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+        margin:0;
+        border-radius: 20px;
+        transition: 0.2s ease-in-out;
+    }
+    .video:hover{
+        cursor: pointer;
+        background-size: 102%;
+    }
+    .video iframe{
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    /*footer*/
+    .footer{
+        padding: 60px 0 50px;
+        background-color: #000;
+        color: #ffffff;
+        opacity: 0;
+    }
+    .footer_wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center; /*по оси Y*/
+        row-gap: 27px;
+    }
+    .social{
+        display: flex;
+        align-items: center;
+        column-gap: 40px;
+        padding-left: 0;
+    }
+    .social_item{
+        list-style-type: none; /* Убираем маркеры */
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    .img_footer{
+        transform: scale(1);
+    }
+    /*стилизованный скроллбар*/
+    ::-webkit-scrollbar{
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track{
+        background-color: black;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+    }
+    /*кейфреймы анимаций*/
+    @keyframes logo_animation_margin {
+        0%{
+            margin-left: -65px;
+        }
+        100%{
+            margin-left: 0px;
+        }
+    }
+    @keyframes scaler {
+        0%{
+            transform: scaleX(1);
+            opacity: 0;
+        }
+        1%{
+            opacity: 1;
+        }
+        100%{
+            transform: scaleX(1.7);
+            opacity: 1;
+        }
+    }
+    @keyframes flashin-border {
+        0% {
+            border-color: white;
+        }
+    
+        50% {
+            border-color: transparent;
+        }
+    
+        100% {
+            border-color: white;
+        }
+    }
+    
+    @keyframes printed-text {
+        from {
+            width: 0%;
+        }
+    }
+    @keyframes animate_3dtext {
+        0%{
+         transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+        } 
+        100%{
+         transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+        } 
+     }
+     @keyframes create_project {
+         0%{
+             transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
+         }
+         100%{
+             transform: perspective(1000px) rotateX(360deg) rotateY(0deg);
+         }
+     }
+
+}
